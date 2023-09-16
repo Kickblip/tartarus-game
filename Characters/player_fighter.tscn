@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://du4gxil8s221k"]
+
+[ext_resource type="Script" path="res://Characters/player_fighter.gd" id="1_opxua"]
+[ext_resource type="Texture2D" uid="uid://c30ob2b5t2el8" path="res://Assets/Minifantasy_True_Heroes_III_v1.0/Minifantasy_True_Herfoes_III_Assets/Fighter/General_Animations/Figther_walk.png" id="1_yya0k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wngr"]
+size = Vector2(9, 6)
+
+[node name="PlayerFighter" type="CharacterBody2D"]
+script = ExtResource("1_opxua")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yya0k")
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_5wngr")
